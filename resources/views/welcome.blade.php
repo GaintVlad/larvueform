@@ -70,8 +70,9 @@
               <button v-bind:class="{ 'btn btn-primary disabled': isDisabled, 'btn btn-primary' : !isDisabled }" type="submit">Send</button>
             </form>
         </validator>
-        <template id="autocompl-list-template" @blur = 'blurInput'>
+        <template id="autocompl-list-template">
         <!--http://fareez.info/blog/create-your-own-autocomplete-using-vuejs/-->
+                    <p @blur= "blurInput">
                     <div style="position:relative" v-bind:class="{'open':openSuggestion}">
                         <input class="form-control" type="text" placeholder="Enter Your Country" v-model="selection"
                             @keydown.enter = 'enter'
@@ -91,6 +92,7 @@
 
                          
                     </div>
+                    </p>
                 </template>  
     <script src="/js/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/vue.resource/0.9.3/vue-resource.min.js"></script>
