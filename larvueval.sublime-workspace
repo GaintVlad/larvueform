@@ -1,0 +1,425 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"R",
+				"Request"
+			],
+			[
+				"m",
+				"message"
+			],
+			[
+				"new",
+				"new_message"
+			],
+			[
+				"f",
+				"function"
+			],
+			[
+				"t",
+				"this"
+			],
+			[
+				"c",
+				"class	Attr"
+			],
+			[
+				"co",
+				"compact"
+			],
+			[
+				"i",
+				"isInProgress"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"te",
+				"text-decoration"
+			],
+			[
+				"st",
+				"style	Tag"
+			],
+			[
+				"p",
+				"price"
+			],
+			[
+				"sk",
+				"Skill"
+			],
+			[
+				"a",
+				"action	Attr"
+			],
+			[
+				"fo",
+				"form	Tag"
+			],
+			[
+				"in",
+				"input	Tag"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Create Article</title>\n    <link href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==\" crossorigin=\"anonymous\">\n    <style>\n        .body {\n            height: 200px !important;\n        }\n\n        .error {\n            color: darkred;\n            margin-top: 5px;\n            display: block;\n        }\n   </style>\n</head>\n<body>\n    \n        <validator name=\"validation1\">\n            <form novalidate class=\"col-md-4 col-md-offset-4\" action=\"/\" method=\"post\">\n              <h1>Create New Article</h1>\n                <hr>\n                {!! csrf_field() !!}\n              <div class=\"username-field\">\n                <label for=\"username\">username:</label>\n                <input id=\"username\" type=\"text\" v-validate:username=\"{ required: true, minlength: 4 }\">\n              </div>\n              <div class=\"comment-field\">\n                <label for=\"comment\">comment:</label>\n                <input id=\"comment\" type=\"text\" v-validate:comment=\"{ required: true, maxlength: 18 }\">\n              </div>\n              <div class=\"errors\">\n                <p v-if=\"$validation1.username.minlength\">Your name is too short.</p>\n                <p v-if=\"$validation1.username.required\">Required your name.</p>\n                <p v-if=\"$validation1.comment.maxlength\">Your comment is too long.</p>\n              </div>\n              <input type=\"submit\" value=\"send\" v-if=\"$validation1.valid\">\n            </form>\n          </validator>\n    <script src=\"/js/vue.js\"></script>\n    <script src=\"https://cdn.jsdelivr.net/vue.resource/0.9.3/vue-resource.min.js\"></script>\n    <script src=\"https://cdn.jsdelivr.net/vue.validator/2.1.5/vue-validator.min.js\"></script>\n    <script src=\"/js/main.js\"></script>\n    </body>\n</html>\n",
+			"file": "resources/views/welcome.blade.php",
+			"file_size": 1981,
+			"file_write_time": 131155040266778844,
+			"settings":
+			{
+				"buffer_size": 1997,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Http/routes.php",
+			"settings":
+			{
+				"buffer_size": 499,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Http/Controllers/FormController.php",
+			"settings":
+			{
+				"buffer_size": 418,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/js/main.js",
+			"settings":
+			{
+				"buffer_size": 85,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/OpenServer/domains/larvueval",
+		"/D/OpenServer/domains/larvueval/app",
+		"/D/OpenServer/domains/larvueval/app/Http",
+		"/D/OpenServer/domains/larvueval/app/Http/Controllers",
+		"/D/OpenServer/domains/larvueval/public",
+		"/D/OpenServer/domains/larvueval/public/js",
+		"/D/OpenServer/domains/larvueval/resources",
+		"/D/OpenServer/domains/larvueval/resources/views"
+	],
+	"file_history":
+	[
+		"/D/OpenServer/domains/larvueval/public/js/main,js",
+		"/D/OpenServer/domains/Larvueauth/app/Http/Controllers/ArticleController.php",
+		"/D/OpenServer/domains/Larvueauth/resources/views/article/create.blade.php",
+		"/D/OpenServer/domains/Larvueauth/app/Http/routes.php",
+		"/D/OpenServer/domains/vue1/scripts/less17_main.js",
+		"/D/OpenServer/domains/vue1/less17_animate.html",
+		"/D/OpenServer/domains/vue1/less17_my-styles.css",
+		"/D/OpenServer/domains/vue1/less15_cast_event.html",
+		"/D/OpenServer/domains/vue1/scripts/less15_main.js",
+		"/D/OpenServer/domains/vue1/scripts/less14_main.js",
+		"/D/OpenServer/domains/vue1/less14_filter.html",
+		"/D/OpenServer/domains/vue1/scripts/less11.js",
+		"/D/OpenServer/domains/vue1/less11_exers1.html",
+		"/D/OpenServer/domains/vue1/less11.css",
+		"/D/OpenServer/domains/laravue/public/js/Less10_main.js",
+		"/D/OpenServer/domains/laravue/resources/views/less10_welcome.blade.php",
+		"/D/OpenServer/domains/laravue/js/main.js",
+		"/D/OpenServer/domains/laravue/database/factories/ModelFactory.php",
+		"/D/OpenServer/domains/laravue/database/migrations/2016_08_09_122426_create_tasks_table.php",
+		"/D/OpenServer/domains/vue1/scripts/less9_main.js",
+		"/D/OpenServer/domains/vue1/scripts/less8_main.js",
+		"/D/OpenServer/domains/vue1/less8_list_template.html",
+		"/D/OpenServer/domains/vue1/less7_lists.html",
+		"/D/OpenServer/domains/vue1/scripts/Less7_main.js",
+		"/D/OpenServer/domains/vue1/less6_Subscription_Plans.html",
+		"/D/OpenServer/domains/vue1/less4_watch.html",
+		"/D/OpenServer/domains/vue1/less4_computed.html",
+		"/D/OpenServer/domains/vue1/less3_component.html",
+		"/D/OpenServer/domains/vue1/less3_onclick.html",
+		"/D/OpenServer/domains/vue1/less3_submit.html"
+	],
+	"find":
+	{
+		"height": 30.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"JSON"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "resources/views/welcome.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1997,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1592,
+								1592
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 418.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/Http/routes.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 499,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								499,
+								499
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/Http/Controllers/FormController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 418,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								201,
+								201
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 27.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "public/js/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 85,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								54,
+								54
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 30.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 118.0
+	},
+	"pinned_build_system": "",
+	"project": "larvueval.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 309.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
