@@ -1,6 +1,6 @@
 //import Vue from 'vue';
 //import Autocomplete from '/js/autocomplete.vue';
-
+//http://vuejs-ru.github.io/vuejs.org/guide
 
 new Vue ({
 	el: "body",
@@ -62,8 +62,8 @@ new Vue ({
 	    
 		    methods: {
 		        
-		        blurInput() {
-		         	console.log ('Danger');
+		        change(event) {
+		         	console.log (this);
 		          // if (!this.openSuggestion) {
 		          //      	this.selection = '';
 		          //      	this.open = false;
@@ -99,7 +99,7 @@ new Vue ({
 		        },
 
 		        //When the user changes input
-		        change() {
+		        changeInput() {
 		            if (this.open == false) {
 		                this.open = true;
 		                this.current = 0;

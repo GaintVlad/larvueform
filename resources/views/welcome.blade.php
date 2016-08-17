@@ -13,7 +13,7 @@
              @invalid="disableButton"
             >
             <form novalidate class="col-md-4 col-md-offset-4" action="/" method="post">
-              <h1>Welcom New User</h1>
+              <h1 >Welcom New User</h1>
                 <hr>
                 {!! csrf_field() !!}
               <div class="form-group username-field">
@@ -72,14 +72,13 @@
         </validator>
         <template id="autocompl-list-template">
         <!--http://fareez.info/blog/create-your-own-autocomplete-using-vuejs/-->
-                    <p @blur= "blurInput">
                     <div style="position:relative" v-bind:class="{'open':openSuggestion}">
                         <input class="form-control" type="text" placeholder="Enter Your Country" v-model="selection"
                             @keydown.enter = 'enter'
                             @keydown.down = 'down'
                             @keydown.up = 'up'
-                            @input = 'change'
-                            
+                            @input = 'changeInput'
+                            @change = 'change'
                         />
                         <ul class="dropdown-menu" style="width:100%">
                             <li v-for="suggestion in matches"
@@ -92,7 +91,7 @@
 
                          
                     </div>
-                    </p>
+                    
                 </template>  
     <script src="/js/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/vue.resource/0.9.3/vue-resource.min.js"></script>
