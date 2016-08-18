@@ -1,28 +1,8 @@
 //import Vue from 'vue';
 //import Autocomplete from '/js/autocomplete.vue';
 //http://vuejs-ru.github.io/vuejs.org/guide
-
-new Vue ({
-	el: "body",
-	data: {
-		isDisabled: true,
-		usern: '',
-	  
-		countries : [
-	            'Belarus','USA','Lithuania',
-	            'Russia','India','England', 'Romania', 'Ruanda'
-	    ],
-
-	    value: ''
-	  
-	},
-
-	
-
-	components: {
-		 
-		autocomplete: {
-			template: '#autocompl-list-template',
+ Vue.component('autocomplete', {
+ 			template: '#autocompl-list-template',
 			props: {
 		        suggestions: {
 		            type: Array,
@@ -62,23 +42,24 @@ new Vue ({
 	    
 		    methods: {
 		        
-		        change(event) {
-		         	console.log (this);
-		          // if (!this.openSuggestion) {
-		          //      	this.selection = '';
-		          //      	this.open = false;
-		          //     }
-		          //  else if (!(this.selection in this.matches)) {
-		          //  		console.log (this.$options); //#autocompl-list-template'
-		          //  }   
+		        change() {
+		        	
+		         	this.timeoutID = setTimeout(
+		         		function() {
+		         			console.log(this.selection);
+		         			this.selection = '';
+		         			this.open = false;
+		         			
+		         		}.bind(this)
+		         		,500);
+		            
 		        },    
 		        
 
 		        //When enter pressed on the input
 		        enter() {
-		            
-		            this.selection = this.matches[this.current];
-		            this.open = false;
+		            this.sugges(this.current);
+		            console.log(this.selection);
 		        },
 
 		        //When up pressed while suggestions are open
@@ -109,14 +90,34 @@ new Vue ({
 
 		        //When one of the suggestion is clicked
 		        suggestionClick(index) {
+		        	this.sugges(index);
+		        },
+
+		        sugges: function(index) {
+		        	clearTimeout(this.timeoutID);
 		            this.selection = this.matches[index];
 		            this.open = false;
-		        },
+		        }
 	    
 			} 
 		}
+
+ 	);
+new Vue ({
+	el: "body",
+	data: {
+		isDisabled: true,
+		usern: '',
+	  
+		countries : [
+	            'Belarus','USA','Lithuania',
+	            'Russia','India','England', 'Romania', 'Ruanda'
+	    ],
+
+	    value: ''
+	  
 	},
-	
+
 	validators: { // `numeric` and `url` custom validator is local registration
 	    numeric: function (val/*,rule*/) {
 	      return /^[0-9]+$/.test(val)
