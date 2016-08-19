@@ -19,7 +19,8 @@
 		    data: function() {
 			    return {
 			        open: false,
-			        current: 0
+			        current: 0,
+			        timeoutID: undefined,
 			        }
 		    },
 
@@ -95,6 +96,7 @@
 
 		        sugges: function(index) {
 		        	clearTimeout(this.timeoutID);
+		            this.timeoutID = undefined;
 		            this.selection = this.matches[index];
 		            this.open = false;
 		        }
@@ -109,7 +111,7 @@ new Vue ({
 		isDisabled: true,
 		usern: '',
 	  
-		countries : [
+		countries :[ 
 	            'Belarus','USA','Lithuania',
 	            'Russia','India','England', 'Romania', 'Ruanda'
 	    ],
@@ -164,7 +166,12 @@ new Vue ({
 			this.usern = this.usern.trim();
 		},
 
-		
+		enterButton: function() {
+			if (this.isDisabled) {
+				console.log(this.isDisabled)
+				return;
+			}
+		},
 
 	},
 	

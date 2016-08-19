@@ -67,7 +67,9 @@
                 <p v-if="$validation1.comment.required">Required your comment.</p>
                 <p v-if="$validation1.comment.maxlength">Your comment is too long.</p>
               </div>
-              <button v-bind:class="{ 'btn btn-primary disabled': isDisabled, 'btn btn-primary' : !isDisabled }" type="submit">Send</button>
+              <button class="btn btn-primary" :disabled="isDisabled" type="submit"
+                
+              >Send</button>
             </form>
         </validator>
         <template id="autocompl-list-template">
